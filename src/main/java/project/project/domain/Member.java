@@ -1,7 +1,14 @@
 package project.project.domain;
 
-public class Member {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
+public class Member {
+    //자동으로 생성시켜주는 시퀀스
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
